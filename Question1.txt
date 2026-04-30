@@ -1,0 +1,11 @@
+%% question 1.1 - Natural Angular Frequency
+% M. SELEPE 12038644
+
+% parameters
+m = 5;        % mass in [kg]
+k = 2000;     % spring stiffness in [N/m]
+
+wn = sqrt(k/m);   % Natural angular frequency [rad/s]
+
+% answer
+fprintf('Natural Angular Frequency: wn = %.4f rad/s\n', wn);
