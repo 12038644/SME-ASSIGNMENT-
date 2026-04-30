@@ -1,0 +1,20 @@
+%% Question1.2 - Displacement x(t)
+% M. SELEPE 12038644
+
+% parameters
+m  = 5;       % mass in [kg]
+k  = 2000;    % spring stiffness in [N/m]
+x0 = 0.02;    % initial displacement in [m]
+
+wn = sqrt(k/m);% Natural angular frequency [rad/s]
+
+% Time vector
+t = linspace(0, 5, 800);   % 0 to 5 seconds, 800 points
+
+
+x = x0 * cos(wn * t);% Displacement equation: x(t) = x0*cos(wn*t)
+
+% Answer
+fprintf('Displacement computed: x(t) = %.4f * cos(%.4f * t)\n', x0, wn);
+fprintf('At t = 0 s : x = %.4f m\n', x(1));
+fprintf('At t = 5 s : x = %.4f m\n', x(end));

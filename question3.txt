@@ -1,0 +1,31 @@
+%%Question  1.3 - Plot Displacement vs Time
+% M. SELEPE 12038644
+
+% System parameters
+m  = 5;       % mass in [kg]
+k  = 2000;    % spring stiffness in[N/m]
+x0 = 0.02;    % initial displacement in [m]
+
+
+wn = sqrt(k/m);% Natural angular frequency [rad/s]
+
+% Time vector
+t = linspace(0, 5, 800);   % 0 to 5 seconds, 800 points
+
+x = x0 * cos(wn * t);% Displacement: x(t) = x0*cos(wn*t)
+
+% answer
+figure;
+plot(t, x, 'b', 'LineWidth', 1.5);
+
+% Labels and formatting
+title('Displacement vs Time - Undamped Free Vibration');
+xlabel('Time (s)');
+ylabel('Displacement x(t) [m]');
+grid on;
+xlim([0 5]);
+ylim([-0.03 0.03]);
+
+% Annotate key values
+yline(x0,  '--r', 'Amplitude = +0.02 m', 'LabelHorizontalAlignment', 'left');
+yline(-x0, '--r', 'Amplitude = -0.02 m', 'LabelHorizontalAlignment', 'left');
